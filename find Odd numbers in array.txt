@@ -1,0 +1,47 @@
+		
+//  Anonymous function for find Odd numbers in array
+let arr= [123, 45, 456, 567, 5678,1234567]
+let result1=function(arr){
+    let arr1=[];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 !=0){
+            arr1.push(arr[i]);
+        }
+    }
+    return arr1;
+}
+console.log(result1(arr));
+
+
+
+
+// IIFE function for find Odd numbers in array
+
+//let arr= [123, 45, 456, 567, 5678,1234567]
+let result2=(function(arr){
+    let arr1=[];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 !=0){
+            arr1.push(arr[i]);
+        }
+    }
+    return arr1;
+})(arr)
+console.log(result2);
+
+
+
+
+// Arrow function for find Odd numbers in array
+
+//let arr= [123, 45, 456, 567, 5678,1234567]
+let result3= arr =>{
+    let arr1=[];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 !=0){
+            arr1.push(arr[i]);
+        }
+    }
+    return arr1;
+}
+console.log(result3(arr));

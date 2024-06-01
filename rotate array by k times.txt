@@ -1,0 +1,30 @@
+arr=[1, 2, 3, 4, 5, 6, 7, 8, 9];
+//Anonymous function for rotate array
+let rotatecase1=function(arr, k){
+    
+    while(k){
+        let tem=arr[0];
+        for(let i=0; i<arr.length-1; i++){
+            arr[i]=arr[i+1];
+        }
+        arr[arr.length-1]=tem;
+        k--;
+    }
+    return arr;
+}
+
+console.log(rotatecase1(arr,3))
+
+//IIFE function for rotate array
+let rotatecase2=(function(arr, k){
+    while(k){
+        let tem=arr[0];
+        for(let i=0; i<arr.length-1; i++){
+            arr[i]=arr[i+1];
+        }
+        arr[arr.length-1]=tem;
+        k--;
+    }
+    return arr;
+})(arr,3)
+console.log(rotatecase2)

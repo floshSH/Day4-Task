@@ -1,0 +1,44 @@
+arr = [1, 2, 3, 3, 3, 4, 5, 1, 1, 2, 6,7, 5, 4 ,6, 7];
+//Anonymous function for remove duplicates
+let original=function(arr){
+    let originalArray=[];
+    for(let index in arr){
+        
+       if(isOriginal(arr, index)){
+        originalArray.push(arr[index]);
+       }
+    }
+    return originalArray;
+}
+let isOriginal=function(arr, index){
+    for(let j=0; j<index;j++){
+        if(arr[index] == arr[j]){
+            
+            return false;
+        }
+    }
+    return true;
+}
+console.log(original(arr));
+
+//IIFE function for remove duplicates
+let original2=(function(arr){
+    let originalArray2=[];
+    for(let index in arr){
+        
+       if(isOriginal2(arr, index)){
+        originalArray2.push(arr[index]);
+       }
+    }
+    return originalArray2;
+})(arr)
+function isOriginal2(arr, index){
+    for(let j=0; j<index;j++){
+        if(arr[index] == arr[j]){
+            
+            return false;
+        }
+    }
+    return true;
+}
+console.log(original2);

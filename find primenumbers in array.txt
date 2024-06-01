@@ -1,0 +1,78 @@
+
+let arr= [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+//Anonymous function for find primenumbers in Array
+let result1= function(num){
+    let primeNumbers=[];
+    
+    for(let value of num){
+   
+        if(value>1 && isprime(value)){
+            primeNumbers.push(value);
+        }
+       
+    
+}
+    return primeNumbers;
+}
+ const isprime= function(value){
+    for(let i=2;i<value;i++){
+        if(value%i ==0){
+            return false
+        }
+    }
+    return true;
+ }
+console.log(result1(arr));
+
+// IIFE function for find primenumbers in Array
+
+let result2= (function(num){
+    let primeNumbers=[];
+   
+    for(let value2 of num){
+        
+        if(value2>1 && isprime2(value2)){
+            primeNumbers.push(value2);
+        }
+       
+    }
+    return primeNumbers;
+})(arr)
+function isprime2(value2){
+    for(let i=2;i<value2;i++){
+        if(value2%i ==0){
+            return false
+        }
+    }
+    return true;
+ }
+ 
+
+ console.log(result2);
+
+
+ // Arrow function for find primeNumbers in Array
+ let result3= (arr) => {
+    let primeNumbers=[];
+   
+    for(let value3 of arr){
+        
+        if(value3>1 && isprime3(value3)){
+            primeNumbers.push(value3);
+        }
+       
+    }
+    return primeNumbers;
+}
+function isprime3(value3){
+    for(let i=2;i<value3;i++){
+        if(value3%i ==0){
+            return false
+        }
+    }
+    return true;
+ }
+ 
+
+ console.log(result3(arr));

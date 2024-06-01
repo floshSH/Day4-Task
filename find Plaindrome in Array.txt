@@ -1,0 +1,85 @@
+let arr= ["malayalam", "good", "deed", "wow", "madam"];
+//Anonymous function for find palindrome in array
+
+let result1=function(arr){
+   let palindrome=[];
+   for(let words of arr){
+    if(isPalindrome(words)){
+        palindrome.push(words);
+        //console.log(palindrome);
+    }
+   }
+   return palindrome;
+}
+
+let isPalindrome = function(words){
+    let j=words.length-1;
+    for(let i=0; i<(words.length) / 2 ; i++){
+        //console.log("hello");
+        if(words[i] !== words[j]){
+            //console.log("hello");
+            return false;
+        }
+        j--;
+    }
+    return true;
+}
+console.log(result1(arr));
+
+
+//IIFE function for find palindrome in array
+
+let result2=(function(arr){
+    let palindrome=[];
+    for(let words of arr){
+     if(isPalindrome2(words)){
+         palindrome.push(words);
+         //console.log(palindrome);
+     }
+    }
+    return palindrome;
+ })(arr)
+ 
+ function isPalindrome2(words){
+     let j=words.length-1;
+     for(let i=0; i<(words.length) / 2 ; i++){
+         //console.log("hello");
+         if(words[i] !== words[j]){
+             //console.log("hello");
+             return false;
+         }
+         j--;
+     }
+     return true;
+ }
+ console.log(result2);
+
+
+
+ //Arrow function for find palindrome in array
+
+ 
+let result3= arr =>{
+    let palindrome=[];
+    for(let words of arr){
+     if(isPalindrome3(words)){
+         palindrome.push(words);
+         //console.log(palindrome);
+     }
+    }
+    return palindrome;
+ }
+ 
+ let isPalindrome3= words =>{
+     let j=words.length-1;
+     for(let i=0; i<(words.length) / 2 ; i++){
+         //console.log("hello");
+         if(words[i] !== words[j]){
+             //console.log("hello");
+             return false;
+         }
+         j--;
+     }
+     return true;
+ }
+ console.log(result2);

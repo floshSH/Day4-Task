@@ -1,0 +1,32 @@
+let arr= [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+//Anonymous function for sum of all numbers in array
+
+let sum1= function(arr){
+    let result1=0;
+    for(let i=0;i<arr.length;i++){
+        result1 +=arr[i];
+    }
+    return result1;
+}
+console.log(sum1(arr));
+
+//IIFE function for sum of all numbers in array
+let sum2= (function(arr){
+    let result2=0;
+    for(let i=0;i<arr.length;i++){
+        result2 +=arr[i];
+    }
+    return result2;
+})(arr)
+console.log(sum2);
+
+//arrow function for sum of all numbers in array
+let sum3= arr =>{
+    let result3=0;
+    for(let i=0;i<arr.length;i++){
+        result3 +=arr[i];
+    }
+    return result3;
+}
+console.log(sum3(arr));

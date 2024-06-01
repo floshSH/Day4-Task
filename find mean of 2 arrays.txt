@@ -1,0 +1,27 @@
+arr1=[1, 2, 3, 4, 5];
+arr2= [6, 7, 8, 9, 10];
+
+//Anonymous function for find median of 2 sorted arrays
+
+let median1= function(arr1,arr2){
+    let mean1=0;
+    for(let i=0; i<arr1.length ; i++){
+        mean1 += arr1[i]+ arr2[i];
+        }
+    mean1 = mean1 / (arr1.length + arr2.length);
+   return mean1;
+}
+console.log( median1(arr1, arr2));
+
+//IIFE function for find median of 2 sorted arrays
+let median2= (function(arr1,arr2){
+    let mean2=0;
+    for(let i=0; i<arr1.length ; i++){
+        mean2 += arr1[i]+ arr2[i];
+        }
+    mean2 = mean2 / (arr1.length + arr2.length);
+   return mean2;
+})(arr1,arr2)
+console.log( median2);
+
+
